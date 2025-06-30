@@ -13,7 +13,7 @@ args = parser.parse_args()
 # 設定
 #config_file = 'configs/mm_grounding_dino/coco/grounding_dino_swin-t_finetune_16xb4_1x_stanfordcarType.py'
 config_file = 'configs/grounding_dino/grounding_dino_swin-t_finetune_8xb2_20e_StanfordCarType.py'
-
+weights = 'StanfordCarType_work_dir/epoch_20.pth'
 device = 'cuda:0'
 image_dir = 'data/StanfordCar/images/cars_test/'
 output_dir = 'outputs_StanfordCarType_work_dir/'
