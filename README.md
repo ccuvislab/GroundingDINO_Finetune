@@ -53,6 +53,9 @@ configs/grounding_dino/
 
 ## 🚀 5. 開始訓練模型
 
+在完成訓練後，於你指定的 `--work-dir` 資料夾中（例如：`StanfordCarType_work_dir/`）會產生訓練完成的模型權重檔 `.pth`。
+請記得在 `batch_infer_with_accuracy_Type_Diff.py` 中設定該 `.pth` 檔案的完整路徑作為推論用模型的 checkpoint。
+
 使用以下指令進行訓練：
 
 ```bash
