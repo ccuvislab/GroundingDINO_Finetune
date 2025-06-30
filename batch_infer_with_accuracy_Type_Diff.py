@@ -55,8 +55,8 @@ for i, entry in enumerate(entries):
             print(f"警告: 圖片不存在 {image_path}，跳過處理")
             continue
             
-        correct_type = entry['caption'] # 這邊更改
-        wrong_color_descriptions = entry['trivial_negatives'] # 這邊更改
+        correct_type = entry['correct_car_type'] # 這邊更改
+        wrong_color_descriptions = entry['wrong_car_types'] # 這邊更改
         
         # 根據max_wrong_colors參數限制錯誤顏色的數量
         if max_wrong_colors > 0:
