@@ -118,7 +118,7 @@ python AccuracyScoreMulti.py
 
 3. 輸出將顯示不同 `Thresholds` 下的 Top-K 正確率（Top-1 / Top-5 等）。
 
-若欲計算 Top-5 準確率，請將 `AccuracyScoreMulti.py` 中第 17 行的 `top_n_values` 參數改為 `[1, 5]`
+-  若欲計算 Top-5 準確率，請將 `AccuracyScoreMulti.py` 中第 17 行的 `top_n_values` 參數改為 `[1, 5]`
 ---
 
 ## 📝 備註補充
