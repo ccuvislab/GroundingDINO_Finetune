@@ -117,7 +117,37 @@ python AccuracyScoreMulti.py
 
 ---
 
-## 📌 備註
+## 📝 備註補充
+
+**注意事項：**
 
 - 若遇錯誤請確認 annotations 與 caption 對應正確。
-- 若有不同屬性分析需求（brand/model/color/type），請對應修改 `batch_infer_with_accuracy_*.py`。
+在 `demo/batch_infer_with_accuracy_Type_Diff.py` 中的第 60、61 行，請確保索引鍵名稱對應正確：
+
+```python
+correct_type = entry['caption']  # 此處需修改
+wrong_color_descriptions = entry['trivial_negatives']  # 此處需修改
+```
+
+若使用的是 `annotations_with_wrong_vehicle_categories_test_modified.json` 檔案，其欄位如下所示：
+
+```json
+{
+  "file_name": "00001.jpg",
+  "correct_car_type": "a photo of a Sedan",
+  "wrong_car_types": [
+    "a photo of a Hatchback",
+    "a photo of a ClubCab",
+    ...
+  ]
+}
+```
+
+則應修改為：
+
+```python
+correct_type = entry['correct_car_type']
+wrong_color_descriptions = entry['wrong_car_types']
+```
+
+請依據所選用的 FG-OVVD caption json 結構對應正確欄位名稱，以確保推論正確運作。
